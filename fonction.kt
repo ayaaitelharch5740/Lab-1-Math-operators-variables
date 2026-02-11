@@ -1,32 +1,38 @@
 fun main() {
-    // Task 1: operations on numbers
-    println(123 + 456 * 789)
-    println(1 + 2 * 3 + 4 * 5 + 6 * 7 + 8 * 9)
-    println((1 + 2) * 3 + 4 * 5 + 6 * (7 + 8) * 9)
-    println(13530.0 / 1.23)
 
-    // Task 2: operations on variables
-    val scoreLevel1 = 79
-    val scoreLevel2 = 92
-    val scoreLevel3 = 86
+    // ===== Task 1 : calculs numériques =====
+    val result1 = 123 + 456 * 789
+    val result2 = 1 + 2 * 3 + 4 * 5 + 6 * 7 + 8 * 9
+    val result3 = (1 + 2) * 3 + 4 * 5 + 6 * (7 + 8) * 9
+    val result4 = 13530.0 / 1.23
 
-    val totalScore = scoreLevel1 + scoreLevel2 + scoreLevel3
+    println(result1)
+    println(result2)
+    println(result3)
+    println(result4)
 
-    // Simple (Int) average
-    val averageScoreInt = totalScore / 3
+    // ===== Task 2 : calculs avec variables =====
+    val levelOneScore = 79
+    val levelTwoScore = 92
+    val levelThreeScore = 86
 
-    // Pro (Double) average
-    val averageScoreDouble = totalScore / 3.0
+    val total = levelOneScore + levelTwoScore + levelThreeScore
 
-    println("Total score = $totalScore")
-    println("Average (Int) = $averageScoreInt")
-    println("Average (Double) = %.2f".format(averageScoreDouble))
+    // Moyenne entière
+    val averageInt = total / 3
 
-    // Task 3: bonus
-    val boostMultiplier = 4
-    val scoreBoost = totalScore * boostMultiplier
-    val finalBoostedScore = totalScore + scoreBoost
+    // Moyenne flottante
+    val averageDouble = total / 3.0
 
-    println("Score boost = $scoreBoost")
-    println("Final boosted score = $finalBoostedScore")
+    println("Total score = $total")
+    println("Average (Int) = $averageInt")
+    println("Average (Double) = %.2f".format(averageDouble))
+
+    // ===== Task 3 : bonus =====
+    val multiplier = 4
+    val bonus = total * multiplier
+    val finalScore = total + bonus
+
+    println("Score boost = $bonus")
+    println("Final boosted score = $finalScore")
 }
